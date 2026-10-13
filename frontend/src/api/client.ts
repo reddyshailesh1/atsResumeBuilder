@@ -2,7 +2,8 @@ import type { AuthResponse, LoginPayload, RegisterPayload, UserProfile } from '.
 import type { ResumeData, ResumeEntity, ResumeVersion, ResumeStyling, AiStylingProposal, ExtractedTemplateProposal } from '../types/resume';
 import type { ATSAnalysisResult, JobDescriptionEntity } from '../types/analysis';
 
-const BASE_URL = '/api';
+const API_HOST = (import.meta.env.VITE_API_BASE_URL as string | undefined) || '';
+const BASE_URL = API_HOST ? `${API_HOST.replace(/\/$/, '')}/api` : '/api';
 
 class ApiClient {
   private token: string | null = null;
