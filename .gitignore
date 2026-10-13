@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Frontend build
+frontend/dist/
+frontend/dist-ssr/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.local
+!.env.example
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+ats_resumes.db
+
+# Large dataset files
+*.csv
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
