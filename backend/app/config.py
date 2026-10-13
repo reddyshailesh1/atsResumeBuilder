@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
 
     # Database
-    DATABASE_URL: str = "sqlite:///./ats_resumes.db"
+    DATABASE_URL: str = "sqlite:////tmp/ats_resumes.db" if os.environ.get("VERCEL") else "sqlite:///./ats_resumes.db"
 
     # AI Configuration
     AI_PROVIDER: str = "fallback"  # 'gemini' | 'openai' | 'fallback'
